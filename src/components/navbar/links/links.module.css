@@ -41,5 +41,6 @@
     gap: 10px;
     overflow: hidden;
     transition: height 0.5s ease-in-out;
+    z-index: 100;
   }
 }

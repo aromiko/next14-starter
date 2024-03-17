@@ -18,7 +18,7 @@ const Links = () => {
   const isAdmin = true;
 
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <div className={styles.links}>
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
@@ -47,7 +47,7 @@ const Links = () => {
           ))}
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

@@ -7,7 +7,10 @@ import Navbar from '@/components/navbar/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Next App',
+  title: {
+    default: 'Home | Next.js',
+    template: '%s | Next.js',
+  },
   description: 'Next.js starter app',
 };
 
