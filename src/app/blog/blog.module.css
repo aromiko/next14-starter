@@ -4,6 +4,10 @@
   gap: 20px;
 }
 
+.title {
+  font-size: 96px;
+}
+
 .post {
   width: 30%;
 }

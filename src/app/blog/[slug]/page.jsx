@@ -4,9 +4,21 @@ import { Suspense } from 'react';
 import { getPost } from '@/lib/data';
 import styles from './singlePost.module.css';
 
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+    next: { revalidate: 3600 },
+  });
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+};
+
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
-  const post = await getPost(slug);
+  const post = await getData(slug);
 
   return {
     title: post.title,
